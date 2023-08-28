@@ -9,4 +9,3 @@ console.error('Error copying file:', err);
 console.log('File copied successfully!');
 }
 });
-/* הערה מדוד */
