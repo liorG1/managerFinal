@@ -16,7 +16,7 @@ import {
 import { Cookies, useCookies } from "react-cookie";
 
 
-const url='http://localhost:3000/products/all'
+const url='https://server-spuh.onrender.com/products/all'
 function AllProducts(){
     const [data,setData]=useState('')
     const [inputElement,setInput]=useState(null)
