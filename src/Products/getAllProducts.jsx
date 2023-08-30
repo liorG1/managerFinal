@@ -52,7 +52,7 @@ setInput(e.target.parentElement.id)
         console.log(pro);
         const value=e.target.previousElementSibling.value
         console.log(value);
-        const url='http://localhost:3000/products/update/'+ e.target.parentElement.id
+        const url='https://server-spuh.onrender.com/products/update/'+ e.target.parentElement.id
         console.log(url);
          const response=await axios.put(
           url,{[pro]:value}, {
@@ -66,7 +66,7 @@ setInput(e.target.parentElement.id)
 
       const deleteProduct=async(e)=>{
         const id=e.target.parentElement.id
-        const url='http://localhost:3000/products/delete/'+id
+        const url='https://server-spuh.onrender.com/products/delete/'+id
         console.log(url);
 const response=await axios.delete(url)
 console.log(response);

@@ -8,7 +8,7 @@ export default function AllProductsClient(){
     const [loading,setLoading]=useState()
     const fetch=async()=>{
         try {
-            const response=await axios.get('http://localhost:3000/products/all')
+            const response=await axios.get('https://server-spuh.onrender.com/products/all')
             return response.data
         } catch (error) {
             console.log(error);

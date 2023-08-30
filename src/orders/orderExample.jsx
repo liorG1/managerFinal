@@ -22,12 +22,12 @@ const [loading,setLoading]=useState()
  const [check,setCheck]=useState(false)
 const [products,setProducts]=useState([])
 const fetch=async()=>{
-  const response=await axios.get(`http://localhost:3000/orders/ById/${order_id}`)
+  const response=await axios.get(`https://server-spuh.onrender.com/orders/ById/${order_id}`)
   
   /* setData(response)
   console.log(data);
 
-  setUserDetlis(await axios.get(`http://localhost:3000/users/getUser`,{
+  setUserDetlis(await axios.get(`https://server-spuh.onrender.com/users/getUser`,{
     headers:{
       token:cookie.token
     }
@@ -43,14 +43,14 @@ const fetch=async()=>{
 
 const getUserDetalis=async()=>{
 
-    const detalis=await axios.post('http://localhost:3000/users/getUser',{
+    const detalis=await axios.post('https://server-spuh.onrender.com/users/getUser',{
       id:userId
     })
     return detalis 
 }
 
 const productsDetalis=async(id)=>{
-    const response=await axios.get(`http://localhost:3000/products/ById/${id}`)
+    const response=await axios.get(`https://server-spuh.onrender.com/products/ById/${id}`)
     return response.data.product
 }
 

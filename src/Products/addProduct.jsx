@@ -29,7 +29,7 @@ export default function AddProduct() {
     try {
       e.preventDefault();
       const response = await axios.post(
-        "http://localhost:3000/products/add",
+        "https://server-spuh.onrender.com/products/add",
         product,
         {
           headers: {

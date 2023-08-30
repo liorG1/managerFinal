@@ -21,7 +21,7 @@ export default  function AllUsers(){
         const [user,setUser]=useState()
 
         const all=async()=>{
-            const response=await axios.get('http://localhost:3000/users/getAll')
+            const response=await axios.get('https://server-spuh.onrender.com/users/getAll')
             console.log(response.data);
             return response.data
         }
