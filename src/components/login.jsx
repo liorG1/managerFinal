@@ -36,7 +36,7 @@ export default function Login(){
         e.preventDefault();
         try {
             const response=await axios.post(
-                "http://localhost:3000/users/login",
+                "https://server-spuh.onrender.com/users/login",
                 userDetails,
                 {
                    headers :{"Content-Type":"application/json"},
