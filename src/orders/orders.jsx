@@ -8,13 +8,13 @@ import {
     Td,
     TableCaption,
     TableContainer,
-    Select,Stack,
+    Select,Stack,Badge,
 Spinner  } from '@chakra-ui/react'
 import axios from 'axios'
 import { color } from 'framer-motion'
 import { useEffect, useState } from 'react'
 export default function AllOrders(){
-
+ 
 const [data,setData]=useState()
 const [loading,setLoading]=useState(false)
 
