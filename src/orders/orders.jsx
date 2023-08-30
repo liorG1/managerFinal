@@ -72,7 +72,7 @@ const OrderCard=(e)=>{
 </Stack>
       
         <TableContainer>
-  <Table variant='striped' colorScheme='teal'>
+  <Table variant='striped' colorScheme='#CBB26A'>
     <TableCaption>Imperial to metric conversion factors</TableCaption>
     <Thead>
       <Tr>
