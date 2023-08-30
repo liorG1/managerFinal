@@ -9,8 +9,7 @@ import {
     TableCaption,
     TableContainer,
     Select,Stack,
-    Badge
-  } from '@chakra-ui/react'
+Spinner  } from '@chakra-ui/react'
 import axios from 'axios'
 import { color } from 'framer-motion'
 import { useEffect, useState } from 'react'
@@ -19,7 +18,7 @@ export default function AllOrders(){
 const [data,setData]=useState()
 const [loading,setLoading]=useState(false)
 
-const url='https://server-spuh.onrender.com:3000/orders/all'
+const url='https://server-spuh.onrender.com/orders/all'
 const getAll=async()=>{
     try {
         const response=await axios.get(url)
