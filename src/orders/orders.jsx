@@ -44,7 +44,7 @@ useEffect(()=>{
 const status=async(e)=>{
   const status= e.target.value;
   const id= e.target.id;
-  const response=await axios.get(`http://localhost:3000/orders/updateStatus/${id}/${status}`)
+  const response=await axios.get(`https://server-spuh.onrender.com/orders/updateStatus/${id}/${status}`)
   console.log(response);
 }
 
