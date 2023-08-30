@@ -24,7 +24,7 @@ import { useEffect, useState } from 'react'
     const fetch=async()=>{
 
         try {
-            const response=await axios.get('http://localhost:3000/orders/all')
+            const response=await axios.get('https://server-spuh.onrender.com/orders/all')
            return response
         } catch (error) {
             console.log(error.message);
@@ -33,7 +33,7 @@ import { useEffect, useState } from 'react'
     const changeStatus =async(e)=>{
         try {
             const id= e.target.id;
-            const response=await axios.get(`http://localhost:3000/orders/updateStatus/${id}/progress`)
+            const response=await axios.get(`https://server-spuh.onrender.com/orders/updateStatus/${id}/progress`)
             console.log(response);
         } catch (error) {
             console.log(error);

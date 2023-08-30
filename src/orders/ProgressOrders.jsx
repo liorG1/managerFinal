@@ -25,7 +25,7 @@ import { useEffect, useState } from 'react'
     const fetch=async()=>{
 
         try {
-            const response=await axios.get('https://server-spuh.onrender.com:3000/orders/all')
+            const response=await axios.get('https://server-spuh.onrender.com/orders/all')
            return response
         } catch (error) {
             console.log(error.message);
