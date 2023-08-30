@@ -1,4 +1,4 @@
-import { Box, Input } from '@chakra-ui/react'
+import { Box, Input, useToast } from '@chakra-ui/react'
 
 import {
     FormControl,
@@ -9,7 +9,7 @@ import {
 import axios from 'axios'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-  
+
 import { useCookies } from 'react-cookie';
 export default function Login(){
     const [userDetails,setDetails]=useState({
@@ -62,8 +62,8 @@ export default function Login(){
         }
         }
     return(
-        <Box as={"form"}>
-            <div style={{color:"red",fontSize:"2em"}}>Login page</div>
+        <Box as={"form"} backgroundColor={'black'} >
+            <div style={{color:"#CBB26A",fontSize:"2em"}}>Login page</div>
         <FormControl id='name' >
         <FormLabel htmlFor='name' required>full name</FormLabel>
         <Input name='name' required type='text' onChange={addDetail} />
