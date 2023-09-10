@@ -33,7 +33,7 @@ export default function AddProduct() {
         product,
         {
           headers: {
-            token: `token=${cookie.token}`,
+            cookie: `token=${cookie.token}`,
            "Content-Type":"application/json"
           },
         }
