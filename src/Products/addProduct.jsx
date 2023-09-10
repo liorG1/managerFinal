@@ -32,8 +32,11 @@ export default function AddProduct() {
         "https://server-spuh.onrender.com/products/add",
         product,
         {
-          headers :{"Content-Type":"application/json"},
-       }
+          headers: {
+            token: `token=${cookie.token}`,
+           "Content-Type":"application/json"
+          },
+        }
       );
       console.log(response);
       alert(`response : ${response}`)
