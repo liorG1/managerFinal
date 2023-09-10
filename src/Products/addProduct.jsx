@@ -37,11 +37,11 @@ export default function AddProduct() {
           },
         }
       );
-      console.log(response.data.message);
-      alert(`response : ${response.data.message}`)
+      console.log(response);
+      alert(`response : ${response}`)
     } catch (error) {
-      console.log(error.response.data.error);
-      alert(`response : ${response.data.message}`)
+      console.log(error);
+      alert(`error : ${error}`)
     }
   };
   return (
