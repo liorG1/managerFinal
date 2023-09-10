@@ -38,8 +38,10 @@ export default function AddProduct() {
         }
       );
       console.log(response.data.message);
+      alert(`response : ${response.data.message}`)
     } catch (error) {
       console.log(error.response.data.error);
+      alert(`response : ${response.data.message}`)
     }
   };
   return (
