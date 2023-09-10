@@ -13,7 +13,7 @@ export default function ProductById(){
         try {
             
             const response=await axios.get(url)
-            /* console.log(response); */
+          
             return response
         } catch (error) {
             console.log(error)

@@ -36,18 +36,18 @@ function AllProducts(){
 
   useEffect(()=>{
     fetch().then(pro=>{setData(pro)})
-    /* console.log(inputElement); */
+  
         
       },[inputElement,update])
        const changeInput=(e)=>{
-/* console.log(e.target.parentElement.id); */
+
 setInput(e.target.parentElement.id)
       } 
 
       const saveChanges=async(e)=>{
         console.log('change');
         setUpdate(!update) 
-        /* console.log(e.target.previousElementSibling.value); */
+      
          const pro=e.target.parentElement.attributes.name.nodeValue
         console.log(pro);
         const value=e.target.previousElementSibling.value

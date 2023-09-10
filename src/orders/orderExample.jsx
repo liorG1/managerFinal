@@ -23,18 +23,6 @@ const [loading,setLoading]=useState()
 const [products,setProducts]=useState([])
 const fetch=async()=>{
   const response=await axios.get(`https://server-spuh.onrender.com/orders/ById/${order_id}`)
-  
-  /* setData(response)
-  console.log(data);
-
-  setUserDetlis(await axios.get(`https://server-spuh.onrender.com/users/getUser`,{
-    headers:{
-      token:cookie.token
-    }
-  })) */
-
-  /* console.log(userDetalis); */
-  /* console.log(response.data.order); */
   return response
   
 }
@@ -75,23 +63,10 @@ useEffect(()=>{
     })
 },[userId])
 
-/* useEffect(()=>{
-  console.log(`secend`);
-  console.log(userId);
-    getUserDetalis().then(userd=>{
-      console.log(userd);
-      
-      
-    })
-    console.log(userDetails);
-  
-},[userId, userDetails]) */
+
 
 useEffect(()=>{
-/*   console.log(userDetails);
-  console.log('data');
-  console.log(data);
-  console.log(check); */
+
   console.log('products');
   console.log(products);
 },[check])
@@ -150,14 +125,6 @@ useEffect(()=>{
             }  
             
           </Box>
-        {/*   <Box>
-            <Heading size='xs' textTransform='uppercase'>
-              total price
-            </Heading>
-            <Text pt='2' fontSize='sm'>
-              See a detailed analysis of all your business clients.
-            </Text>
-          </Box> */}
         </Stack>
       </CardBody>
     </Card>:<></>

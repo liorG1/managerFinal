@@ -48,8 +48,6 @@ export default function Login(){
             
             if( response.data.success){
                 setSuccess(true)
-
-            /* location.href='http://localhost:5173/user' */
             }
             else{
                 setSuccess(false)
@@ -83,7 +81,6 @@ export default function Login(){
 
         {success&&<div>wellcome {userDetails.name}</div>}
         {success==false&&<div>login falild error: {err}</div>}
-      {/*   {success&&<Link to={'http://localhost:5173/allProducts'}></Link>} */}
         </Box>
     )
 }

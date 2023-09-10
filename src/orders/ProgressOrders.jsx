@@ -68,10 +68,7 @@ console.log(loading);
     console.log(data);
     
 })
-/* data.data.orders.map(order=>{
-    order.status=='done'&&setCount(()=>{count++})
-    console.log(count);
-}) */
+
 
     
 },[loading]
