@@ -102,7 +102,7 @@ setInput(e.target.parentElement.id)
             <Td key={element.price} textAlign={'center'} >{element.price}</Td>
             <Td key={element.catagory}>{element.catagory}</Td> 
             <Td key={element.img} maxWidth={'50px'} ><img src={element.img} alt="element img" /> </Td>
-           <Td id={element._id} display={'flex'} flexDirection={'column'}><Button onClick={changeInput}>edit</Button><Button>delete</Button></Td>
+            <Td id={element._id} display={'flex'} flexDirection={'column'}><Button onClick={changeInput}>edit</Button><Button colorScheme='red' onClick={deleteProduct}>delete</Button></Td>
           </Tr>
         )
       }else{
