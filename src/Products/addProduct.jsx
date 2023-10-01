@@ -60,7 +60,9 @@ export default function AddProduct() {
         })
       }
     } catch (error) {
+      console.log('error');
       console.log(error);
+
       alert(`error : ${error.message}`)
     }
   };
