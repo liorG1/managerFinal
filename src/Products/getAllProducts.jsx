@@ -15,7 +15,6 @@ import {
 } from '@chakra-ui/react'
 import { Cookies, useCookies } from "react-cookie";
 
-
 const url='https://server-spuh.onrender.com/products/all'
 function AllProducts(){
     const [data,setData]=useState('')
@@ -32,22 +31,16 @@ function AllProducts(){
         console.log(error);
       }}
     
-
-
   useEffect(()=>{
     fetch().then(pro=>{setData(pro)})
-  
-        
       },[inputElement,update])
        const changeInput=(e)=>{
 
 setInput(e.target.parentElement.id)
       } 
-
       const saveChanges=async(e)=>{
         console.log('change');
         setUpdate(!update) 
-      
          const pro=e.target.parentElement.attributes.name.nodeValue
         console.log(pro);
         const value=e.target.previousElementSibling.value

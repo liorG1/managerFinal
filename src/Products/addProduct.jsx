@@ -4,12 +4,10 @@ import { useState } from "react";
 import { Cookies, useCookies } from "react-cookie";
 import { useToast } from '@chakra-ui/react'
 
-
 export default function AddProduct() {
   const [success, setSuccess] = useState(null);
   const [cookie] = useCookies(["token"]);
   const toast = useToast()
-
   const [product, setProduct] = useState({
     img: "",
     catagory: "",
@@ -43,7 +41,7 @@ export default function AddProduct() {
             },
           }
         );
-       
+       console.log(response);
         toast({
           title: 'Success adding product',
           status: 'success',
