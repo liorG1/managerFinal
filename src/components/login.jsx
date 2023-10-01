@@ -9,9 +9,10 @@ import {
 import axios from 'axios'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-
+import { useToast } from '@chakra-ui/react'
 import { useCookies } from 'react-cookie';
 export default function Login(){
+    const toast = useToast()
     const [userDetails,setDetails]=useState({
         name:'',
         email:'',
@@ -42,14 +43,26 @@ export default function Login(){
                    headers :{"Content-Type":"application/json"},
                 }
             )
-            console.log('response');
-            console.log(response);
+            /* console.log('response');
+            console.log(response); */
             setCookie('token',response.data.token)
             
             if( response.data.success){
+                toast({
+                    title: `Wellcome ${userDetails.name}`,
+                    status: 'succes',
+                    duration: 9000,
+                    isClosable: true,
+                  })
                 setSuccess(true)
             }
             else{
+                toast({
+                    title: 'Falied login',
+                    status: 'error',
+                    duration: 9000,
+                    isClosable: true,
+                  })
                 setSuccess(false)
                 setError(response.data.err)
             }
@@ -79,8 +92,7 @@ export default function Login(){
 
         <button type='submit' onClick={login} >click to login</button>
 
-        {success&&<div>wellcome {userDetails.name}</div>}
-        {success==false&&<div>login falild error: {err}</div>}
+     
         </Box>
     )
 }
