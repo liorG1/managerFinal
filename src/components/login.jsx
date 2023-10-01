@@ -17,9 +17,7 @@ export default function Login(){
         email:'',
         password:''
     })
-
     console.log(location.origin);
-
     const [success,setSuccess]=useState(null)
     const [err,setError]=useState(null)
 
@@ -32,7 +30,6 @@ export default function Login(){
     }
 
     const login= async(e)=>{
-        
         e.preventDefault();
         try {
             const response=await axios.post(

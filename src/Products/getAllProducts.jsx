@@ -68,8 +68,13 @@ setInput(e.target.parentElement.id)
         const id=e.target.parentElement.id
         const url='https://server-spuh.onrender.com/products/delete/'+id
         console.log(url);
-const response=await axios.delete(url)
-console.log(response);
+        const response=await axios.delete(url, {
+          headers: {
+            tokens: `token=${cookie.token}`,
+           "Content-Type":"application/json"
+          },
+        })
+        console.log(response);
       }
       
  return(
