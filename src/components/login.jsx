@@ -9,7 +9,6 @@ import {
 import axios from 'axios'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useToast } from '@chakra-ui/react'
 import { useCookies } from 'react-cookie';
 export default function Login(){
     const toast = useToast()
