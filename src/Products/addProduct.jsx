@@ -29,8 +29,7 @@ export default function AddProduct() {
   const post = async (e) => {
     try {
       e.preventDefault();
-      if(product.img!=""&&product.brand!=""&&product.catagory!=""&&product.description!=""&&product.name!=""&&product.price!=""){
-
+/*       if(product.img!=""&&product.brand!=""&&product.catagory!=""&&product.description!=""&&product.name!=""&&product.price!=""){ */
         const response = await axios.post(
           "https://server-spuh.onrender.com/products/add",
           product,
@@ -48,7 +47,7 @@ export default function AddProduct() {
           duration: 9000,
           isClosable: true,
         })
-      }
+     /*  }
       else {
         toast({
           title: 'Falied adding product,feilds missing',
@@ -56,7 +55,7 @@ export default function AddProduct() {
           duration: 9000,
           isClosable: true,
         })
-      }
+      } */
     } catch (error) {
       console.log('error');
       console.log(error);
